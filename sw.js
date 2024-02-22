@@ -5,6 +5,7 @@ self.addEventListener('message', (event) => {
   // if (event.data && event.data.type === 'EVAL') {
   //   event.ports[0].postMessage();
   // }
+  debugger;
 
   if (event.data.type === 'CACHE_CACHEFIRST') {
     workbox.routing.registerRoute(
