@@ -7,7 +7,6 @@ self.addEventListener('activate', (event) => {
     event.waitUntil(self.clients.claim());
 });
 
-
 self.addEventListener('message', (event) => {
   // if (event.data && event.data.type === 'EVAL') {
   //   event.ports[0].postMessage();
@@ -20,7 +19,7 @@ self.addEventListener('message', (event) => {
     //   new workbox.strategies.CacheFirst()
     // );
     // debugger;
-    event.ports[0].postMessage("ok");
+    event.source.postMessage("ok");
   }
 });
 
