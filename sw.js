@@ -3,8 +3,8 @@ importScripts('https://cdnjs.cloudflare.com/ajax/libs/workbox-sw/7.0.0/workbox-s
 let urlPattern = "";
 
 self.addEventListener('activate', (event) => {
-    console.log('Service Worker activated');
     event.waitUntil(self.clients.claim());
+    console.log('Service Worker activated');
 });
 
 self.addEventListener('message', (event) => {
