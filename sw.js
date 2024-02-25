@@ -7,6 +7,8 @@ self.addEventListener('activate', (event) => {
     console.log('Service Worker activated');
 });
 
+
+
 self.addEventListener('message', (event) => {
   // if (event.data && event.data.type === 'EVAL') {
   //   event.ports[0].postMessage();
@@ -24,6 +26,7 @@ self.addEventListener('message', (event) => {
 });
 
 self.addEventListener('fetch', event => {
+    debugger;
   // Check if the requested URL matches the pattern
   if (event.request.url.match(urlPattern)) {
     event.respondWith(
